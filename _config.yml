@@ -14,15 +14,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Tales of a Data and Analytics CSA
+title_separator: "|"
+name: "Ioannis Stavrinides"
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello Friends!
-
-  I will use this blog mostly as "notes to myself" for interesting things I am doing. Hopefully this will help others too!
+  Hello Friends! I will use this blog mostly as "notes to myself" for interesting things I am doing. Hopefully this will help others too!
 #twitter_username: username
 github_username: istavrinides
 minimal_mistakes_skin: default
 search: true
+
+repository: "istavrinides/blog"
 
 # Build settings
 markdown: kramdown
@@ -84,6 +86,7 @@ defaults:
       comments: true
       share: true
       related: true
+      show_date: true
   # _pages
   - scope:
       path: "_pages"
@@ -98,3 +101,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark" # "github-dark"
+    issue_term: "pathname"
+    label: "comment" # Optional - must be existing label.
